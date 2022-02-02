@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="488.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.javafxproject1.PrimaryController">
+   <children>
+      <ProgressBar fx:id="orderProgress" layoutX="195.0" layoutY="411.0" prefHeight="18.0" prefWidth="203.0" progress="0.0" />
+      <Button fx:id="CompleteButton" layoutX="243.0" layoutY="441.0" mnemonicParsing="false" onAction="#CompleteOrder" prefHeight="25.0" prefWidth="106.0" text="Complete" />
+      <VBox layoutX="431.0" layoutY="31.0" prefHeight="79.0" prefWidth="144.0">
+         <children>
+            <RadioButton fx:id="Pickup" mnemonicParsing="false" selected="true" text="Pick up">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pord" />
+               </toggleGroup>
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="deliver" mnemonicParsing="false" text="Delivery" toggleGroup="$pord">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <HBox layoutX="24.0" layoutY="110.0" prefHeight="216.0" prefWidth="279.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <RadioButton fx:id="Steak" mnemonicParsing="false" selected="true" text="Steak">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="EntreeSelect" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="Chicken" mnemonicParsing="false" text="Chicken" toggleGroup="$EntreeSelect">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="Lamb" mnemonicParsing="false" text="Lamb" toggleGroup="$EntreeSelect">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="Salmon" mnemonicParsing="false" text="Salmon" toggleGroup="$EntreeSelect">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <VBox prefHeight="216.0" prefWidth="182.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" selected="true" text="Mashed Potatoes">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Green Beans">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Asparagus">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" prefHeight="27.0" prefWidth="126.0" text="Side Salad">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="French Fries">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Baked Potatoe ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="31.0" layoutY="75.0" prefHeight="18.0" prefWidth="87.0" text="Protein" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="176.0" layoutY="75.0" prefHeight="25.0" prefWidth="87.0" text="Sides">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
